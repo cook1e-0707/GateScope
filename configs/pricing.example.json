@@ -1,0 +1,33 @@
+{
+  "defaults": {
+    "apply_cache_discount": true
+  },
+  "models": {
+    "gpt-4o": {
+      "input_per_1k": 0.005,
+      "cached_input_per_1k": 0.0025,
+      "output_per_1k": 0.015
+    },
+    "gpt-4o-mini": {
+      "input_per_1k": 0.00015,
+      "cached_input_per_1k": 0.000075,
+      "output_per_1k": 0.0006
+    },
+    "gpt-5": {
+      "input_per_1k": 0.00125,
+      "cached_input_per_1k": 0.000125,
+      "output_per_1k": 0.01
+    }
+  },
+  "gateways": {
+    "gateway_example": {
+      "apply_cache_discount": false,
+      "models": {
+        "gpt-4o": {
+          "input_per_1k": 0.006,
+          "output_per_1k": 0.018
+        }
+      }
+    }
+  }
+}

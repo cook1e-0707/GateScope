@@ -1,0 +1,33 @@
+paths:
+  prompts_dir: prompts
+  raw_output_dir: outputs/raw
+  processed_output_dir: outputs/processed
+
+collection:
+  repetitions_per_probe: 12
+  gateway_repetitions_per_probe: 5
+  temperature: 0.7
+  total_timeout_seconds: 900
+  attempt_timeout_seconds: 120
+  max_retries: 15
+  official_spacing_hours: 2.0
+  gateway_spacing_hours: 0.0
+  max_output_tokens: 4096
+
+providers:
+  baseline:
+    base_url: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+
+  gateway_example:
+    base_url: https://example-gateway.invalid/v1
+    api_key_env: GATEWAY_API_KEY
+
+training:
+  split_train_count: 10
+  split_test_count: 2
+  validation_size: 0.1
+  oversample_factor: 20
+  num_rounds: 500
+  early_stopping_rounds: 30
+  random_state: 42
